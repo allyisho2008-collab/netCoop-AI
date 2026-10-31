@@ -1,0 +1,56 @@
+{
+  "incident_id": "INC_0012",
+  "status": "diagnosed",
+  "suspected_root_cause": "Likely link congestion causing egress queue drops",
+  "confidence": 0.87,
+  "affected_devices": [
+    "HOSTEL_CORE_SW_01",
+    "HOSTEL_AP_12"
+  ],
+  "supporting_evidence": [
+    {
+      "metric": "link_utilization_pct",
+      "value": 96,
+      "interpretation": "High link utilization"
+    },
+    {
+      "metric": "queue_drops",
+      "value": 1245,
+      "interpretation": "Elevated packet drops"
+    },
+    {
+      "metric": "latency_ms",
+      "value": 185,
+      "interpretation": "Elevated latency"
+    },
+    {
+      "metric": "cpu_utilization_pct",
+      "value": 88,
+      "interpretation": "High CPU"
+    },
+    {
+      "metric": "interface_errors",
+      "value": 12,
+      "interpretation": "Interface errors"
+    },
+    {
+      "metric": "link_status",
+      "value": "degraded",
+      "interpretation": "Link degraded"
+    }
+  ],
+  "alternative_causes": [
+    "ethernet_fault",
+    "device_overload",
+    "link_congestion",
+    "connectivity_degradation",
+    "queue_congestion"
+  ],
+  "recommended_action": "Inspect upstream and egress link utilization",
+  "evidence_sources": [
+    "telemetry_agent",
+    "infrastructure_agent",
+    "connectivity_agent"
+  ],
+  "limitations": []
+}
